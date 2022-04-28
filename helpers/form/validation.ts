@@ -7,9 +7,9 @@ class Validation {
 
     input = ''
 
-    #maxValue = 0
-    #minValue = 0
-    #validations: string[] = []
+    maxValue = 0
+    minValue = 0
+    validations: string[] = []
 
     listening: boolean = false
 
@@ -39,37 +39,37 @@ class Validation {
     }
 
     setValue(value: string) {
-        this.#validations = []
+        this.validations = []
         this.input = value
         return this
     }
 
     notEmpty() {
-        this.#validations.push('not-empty')
+        this.validations.push('not-empty')
         return this
     }
 
     email() {
-        this.#validations.push('email')
+        this.validations.push('email')
         return this
     }
 
     minLength(value: number) {
-        this.#validations.push('min-length')
-        this.#minValue = value
+        this.validations.push('min-length')
+        this.minValue = value
         return this
     }
 
     maxLength(value: number) {
-        this.#validations.push('max-length')
-        this.#maxValue = value
+        this.validations.push('max-length')
+        this.maxValue = value
         return this
     }
 
     validate() {
         let message: string | undefined
-        for (let i = 0; i < this.#validations.length; i++) {
-            const current = this.#validations[i]
+        for (let i = 0; i < this.validations.length; i++) {
+            const current = this.validations[i]
             if (current === 'not-empty') {
                 if (!this.input.length) {
                     message = "Please fill this area"
@@ -83,14 +83,14 @@ class Validation {
                 continue
             }
             if (current === 'min-length') {
-                if (this.input.length < this.#minValue) {
-                    message = `Please enter at least ${this.#minValue} character`
+                if (this.input.length < this.minValue) {
+                    message = `Please enter at least ${this.minValue} character`
                 }
                 continue
             }
             if (current === 'max-length') {
-                if (this.input.length > this.#maxValue) {
-                    message = `Please not enter more than ${this.#maxValue} character`
+                if (this.input.length > this.maxValue) {
+                    message = `Please not enter more than ${this.maxValue} character`
                 }
                 continue
             }
