@@ -52,7 +52,7 @@ const FormInput: FC<FormInputProps> = ({ children, isRequired, errorMessage }) =
   return <div className='md:w-1/3 w-full' ref={inputRef}>
     {children}
     {errorMessage && (
-      <p data-testid="error-message" className='my-2 px-4 font-semibold text-red-700'>{errorMessage}</p>
+      <p data-testid="error-message" className='my-2 px-4 font-semibold text-red-700 capitalize'>{errorMessage}</p>
     )}
   </div>
 }
