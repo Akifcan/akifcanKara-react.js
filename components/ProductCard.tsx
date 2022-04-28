@@ -32,8 +32,8 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
     return <Link href={`/product/${product.id}`} passHref={true}>
         <div aria-label='Product' className='flex flex-col gap-3 md:w-52 w-full cursor-pointer'>
             <ProductImage url={product.avatar} alt={product.name} />
-            <p role={'Product Name'} className='font-medium text-lg'>{product.name}</p>
-            <p role={'Product Price'} className='font-medium text-lg self-center'>${product.price}</p>
+            <p role={'Product Name'} className='font-medium text-lg capitalize'>{product.name}</p>
+            <p role={'Product Price'} className='font-medium text-lg self-center capitalize'>${product.price}</p>
         </div>
     </Link>
 }

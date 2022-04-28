@@ -48,8 +48,8 @@ const ProductDetail: FC = () => {
                     </div>
                     <Divider cropX='20px' />
                     <section role='product description'>
-                        <h2 className='text-3xl font-bold'>Description</h2>
-                        <p className='my-3 font-light'>
+                        <h2 className='text-3xl font-bold capitalize'>Description</h2>
+                        <p className='my-3 font-light capitalize'>
                             {product.description}
                         </p>
                     </section>
