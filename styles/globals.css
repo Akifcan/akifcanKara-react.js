@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header-title {
+    @apply cursor-pointer italic font-bold text-2xl;
+  }
+
+  .common-item {
+    @apply shadow-md rounded-xl;
+  }
+}
+
+:root {
+  --color-primary: #dedede;
+  --min-width: 1rem;
+  --max-width: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.container {
+  width: min(100% - var(--min-width), var(--max-width));
+  margin-inline: auto;
+}
+
+.container.product {
+  width: min(100% - var(--min-width), calc(var(--max-width) - 340px));
+}
+
+.loader {
+  animation: turn 2s ease-in infinite alternate-reverse;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotate(660deg);
+  }
+}
