@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen, waitFor } from "../test-utils";
 import Home from '@/pages/index'
-import "isomorphic-fetch"
 
 describe("Home", () => {
     it("Loader should be exists at first frame", () => {
