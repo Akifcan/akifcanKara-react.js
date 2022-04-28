@@ -10,6 +10,7 @@
     "test": "jest --watch --unhandled-rejections=strict"
   },
   "dependencies": {
+    "@next/env": "^12.1.5",
     "babel-jest": "^28.0.2",
     "next": "12.1.5",
     "react": "18.1.0",
@@ -18,7 +19,6 @@
     "react-test-renderer": "^18.1.0"
   },
   "devDependencies": {
-    "jest-environment-jsdom": "^28.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^14.1.1",
@@ -30,7 +30,9 @@
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "eslint-plugin-testing-library": "^5.3.1",
+    "isomorphic-fetch": "^3.0.0",
     "jest": "^28.0.2",
+    "jest-environment-jsdom": "^28.0.2",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24",
     "typescript": "4.6.3"

@@ -1,4 +1,5 @@
-export const API_DOMAIN = process.env.API!
+
+
 
 class FetchService {
 

@@ -4,9 +4,9 @@ import Container from '@/components/common/Container'
 import Fab from '@/components/common/Fab'
 import Navbar from '@/components/home/Navbar'
 import ProductCard from '@/components/ProductCard'
-import CategoryService, { CategoryProps } from 'services/category.service'
-import ProductService, { ProductProps } from 'services/product.service'
 import { useRouter } from 'next/router'
+import ProductService, { ProductProps } from '@/services/product.service'
+import CategoryService, { CategoryProps } from '@/services/category.service'
 
 const Home: FC = () => {
 
@@ -68,7 +68,7 @@ const Home: FC = () => {
                   value: category.name
                 }
               })} />
-            <main className='container product flex gap-10 justify-center flex-wrap'>
+            <main data-testid="main" className='container product flex gap-10 justify-center flex-wrap'>
               {products?.map(product => {
                 return <ProductCard product={product} key={product.id} />
               })}
