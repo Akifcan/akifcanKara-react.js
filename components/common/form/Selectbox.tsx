@@ -20,7 +20,7 @@ const Selectbox: FC<SelectboxProps> = ({ customClass, placeholder, items = [], o
                 onChange(e.target.value)
                 e.target.setAttribute('value', e.target.value)
             }}
-            className="text-neutral-400 common-item px-3 py-3 w-full appearance-none text-gray-400 font-semibold">
+            className="text-neutral-400 common-item px-3 py-3 w-full appearance-none text-gray-400 font-semibold bg-white">
             <option value={''}>{placeholder}</option>
             {items.map((item, index) => {
                 return <option key={index} value={item.value}>{item.label}</option>
