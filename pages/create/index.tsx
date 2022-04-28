@@ -6,6 +6,7 @@ import Validation, { FormItemProps } from '@/helpers/form/validation'
 import Alert from '@/components/common/Alert'
 import ProductService from '@/services/product.service'
 import CategoryService, { CategoryProps } from '@/services/category.service'
+import Head from 'next/head'
 
 const CreateProduct: FC = () => {
 
@@ -82,6 +83,9 @@ const CreateProduct: FC = () => {
 
     return <Container>
         <div ref={formRef} className='flex  flex-col justify-center items-center gap-5'>
+            <Head>
+                <title>Create Product - UPayments</title>
+            </Head>
             {validation && (
                 <>
                     <h1 className='font-bold text-center my-5 text-4xl'>Create Product</h1>

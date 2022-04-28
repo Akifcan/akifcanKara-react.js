@@ -7,6 +7,7 @@ import ProductCard from '@/components/ProductCard'
 import { useRouter } from 'next/router'
 import ProductService, { ProductProps } from '@/services/product.service'
 import CategoryService, { CategoryProps } from '@/services/category.service'
+import Head from 'next/head'
 
 const Home: FC = () => {
 
@@ -53,6 +54,9 @@ const Home: FC = () => {
   return (
     <Container>
       <>
+        <Head>
+          <title>Products - UPayments</title>
+        </Head>
         <Fab href='/create' />
         {isLoading && (
           <Loader />
