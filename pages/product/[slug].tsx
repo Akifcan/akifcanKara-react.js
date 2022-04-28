@@ -29,7 +29,7 @@ const ProductDetail: FC = () => {
                 <Loader />
             )}
             {product && (
-                <main className='container product'>
+                <main data-testid="product-details" className='container product'>
                     <div className='flex md:flex-row flex-col gap-7 m-h-96 my-10'>
                         <ProductImage url={product.avatar} alt={product.name} size='md:w-72 w-full' />
                         <section role={'product-images'} className='flex flex-col justify-between gap-5'>

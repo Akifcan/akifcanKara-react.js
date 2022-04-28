@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch --unhandled-rejections=strict"
+    "test": "jest --watch --unhandled-rejections=strict --detectOpenHandles"
   },
   "dependencies": {
     "@next/env": "^12.1.5",
